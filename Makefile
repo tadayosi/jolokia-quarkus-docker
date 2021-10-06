@@ -7,7 +7,7 @@ image:
 	podman build -t $(APP_NAME) .
 
 run:
-	podman run --rm -p 8080:8080 -p 8778:8778 --network bridge localhost/$(APP_NAME)
+	podman run --rm -p 8080:8080 -p 8778:8778 localhost/$(APP_NAME)
 
 test:
 	http localhost:8080/hello/test
